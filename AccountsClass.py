@@ -9,6 +9,8 @@ class Customer:
 
     def open_savings_account(self, acc_number, interest_rate):
         savings_acc = SavingsAccount(acc_number, interest_rate)
+        self.accounts.append(savings_acc)
+        return savings_acc
 
     def open_checking_account(self, acc_number):
         checking_acc = CheckingAccount(acc_number)
