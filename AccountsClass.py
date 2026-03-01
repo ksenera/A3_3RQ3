@@ -47,7 +47,9 @@ class SavingsAccount(Account):
         return self.__balance * self.__interest
 
     def print(self):
-        pass
+        print(f"Savings Account Number: {self.__number}")
+        print(f"Balance: {self.__balance}")
+        print(f"Interest Rate: {self.__interest}")
 
 
 class CheckingAccount(Account):
@@ -61,4 +63,5 @@ class CheckingAccount(Account):
             self.withdraw(amount)
 
     def print(self):
-        pass 
+        print(f"Checking Account Number: {self.__number}")
+        print(f"Balance: {self.__balance}")
