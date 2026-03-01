@@ -8,9 +8,10 @@ class Customer:
         self.accounts = []
 
     def open_savings_account(self, acc_number, interest_rate):
-        pass 
+        savings_acc = SavingsAccount(acc_number, interest_rate)
+
     def open_checking_account(self, acc_number):
-        pass 
+        checking_acc = CheckingAccount(acc_number)
     
         
     
@@ -21,10 +22,10 @@ class Account(ABC):
         self.__balance = 0
 
     def check_balance(self):
-        self.__balance
+        return self.__balance 
 
     def withdraw(self, amount):
-        if self.__balance >= 0:
+        if self.__balance >= amount:
             self.__balance -= amount
 
     def deposit(self, amount):
@@ -39,8 +40,8 @@ class SavingsAccount(Account):
         super().__init__(acc_number)
         self.__interest = interest_rate
 
-    def calculate_return(self):
-        pass 
+    def calculate_return(self, balance, interest_rate):
+        return self.__balance * self.__interest
 
     def print(self):
         pass
