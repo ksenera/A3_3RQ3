@@ -35,6 +35,8 @@ class Account(ABC):
         self.__balance += amount
 
     @abstractmethod
+    # assuming since abstract only necessary for 
+    # printing specific type of acc details in inherited classes 
     def print(self):
         pass
 
