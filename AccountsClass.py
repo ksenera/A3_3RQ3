@@ -14,7 +14,7 @@ class Account(ABC):
         self.__balance = balance
 
     def check_balance(self):
-        pass 
+        
 
     def withdraw(self):
         pass
@@ -26,4 +26,12 @@ class Account(ABC):
     def print(self):
         pass
 
-    
+class SavingsAccount(Account):
+    def __init__(self, interest_rate):
+        self.__interest = interest_rate
+
+    def calculate_return(self):
+        pass 
+
+    def print(self):
+        pass
