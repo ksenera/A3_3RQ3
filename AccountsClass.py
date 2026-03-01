@@ -35,3 +35,11 @@ class SavingsAccount(Account):
 
     def print(self):
         pass
+
+
+class CheckingAccount(Account):
+    def transaction(self):
+        pass
+
+    def print(self):
+        pass 
