@@ -52,7 +52,10 @@ class CheckingAccount(Account):
         super().__init__(acc_number)
 
     def transaction(self, amount):
-        pass
+        if amount > 0:
+            self.deposit(amount)
+        else:
+            self.withdraw(amount)
 
     def print(self):
         pass 
