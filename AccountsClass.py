@@ -14,7 +14,8 @@ class Customer:
 
     def open_checking_account(self, acc_number):
         checking_acc = CheckingAccount(acc_number)
-    
+        self.accounts.append(checking_acc)
+        return checking_acc
         
     
 class Account(ABC):
