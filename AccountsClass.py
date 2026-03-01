@@ -7,7 +7,7 @@ class Customer:
         self.last = last_name
         
     
-class Account:
+class Account(ABC):
 
     def __init__(self, balance, acc_number):
         self.__number = acc_number
@@ -22,5 +22,8 @@ class Account:
     def deposit(self):
         pass
 
+    @abstractmethod
+    def print(self):
+        pass
 
     
