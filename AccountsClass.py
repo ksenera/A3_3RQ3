@@ -9,18 +9,17 @@ class Customer:
     
 class Account:
 
-    amount = 0
-
     def __init__(self, balance, acc_number):
-        self.number = acc_number
+        self.__number = acc_number
+        self.__balance = balance
 
-    def check_balance():
+    def check_balance(self):
+        pass 
+
+    def withdraw(self):
         pass
 
-    def withdraw():
-        pass
-
-    def deposit():
+    def deposit(self):
         pass
 
 
