@@ -5,7 +5,13 @@ class Customer:
     def __init__(self, first_name, last_name):
         self.first = first_name
         self.last = last_name
-        self.account = []
+        self.accounts = []
+
+    def open_savings_account(self, acc_number, interest_rate):
+        pass 
+    def open_checking_account(self, acc_number):
+        pass 
+    
         
     
 class Account(ABC):
@@ -15,13 +21,14 @@ class Account(ABC):
         self.__balance = 0
 
     def check_balance(self):
-        pass
+        self.__balance
 
-    def withdraw(self):
-        pass
+    def withdraw(self, amount):
+        if self.__balance >= 0:
+            self.__balance -= amount
 
-    def deposit(self):
-        pass
+    def deposit(self, amount):
+        self.__balance += amount
 
     @abstractmethod
     def print(self):
@@ -42,7 +49,8 @@ class SavingsAccount(Account):
 class CheckingAccount(Account):
     def __init__(self, acc_number):
         super().__init__(acc_number)
-    def transaction(self):
+
+    def transaction(self, amount):
         pass
 
     def print(self):
