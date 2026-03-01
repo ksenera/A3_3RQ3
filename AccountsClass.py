@@ -1,3 +1,5 @@
+from abc import ABC, abstractmethod
+
 class Customer: 
 
     def __init__(self, first_name, last_name):
@@ -6,6 +8,8 @@ class Customer:
         
     
 class Account:
+
+    amount = 0
 
     def __init__(self, balance, acc_number):
         self.number = acc_number
@@ -19,5 +23,5 @@ class Account:
     def deposit():
         pass
 
-    
+
     
